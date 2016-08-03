@@ -1,24 +1,25 @@
-[![Build Status](https://travis-ci.org/tejado/pgoapi.svg?branch=master)](https://travis-ci.org/tejado/pgoapi)
+Building off of [tejado](https://github.com/tejado/pgoapi)'s Pokemon Go API. Use at your own risk.
 
-# pgoapi - a pokemon go api lib in python
-pgoapi is a client/api/demo for Pokemon Go by https://github.com/tejado.  
-It allows automatic parsing of requests/responses by finding the correct protobuf objects over a naming convention and will return the response in a parsed python dictionary format.   
+I don't have the time right now to work on this. Maybe in  the future.
 
- * This is unofficial - USE AT YOUR OWN RISK !
- * I don't play pokemon go !
- * No bot/farming code included !
+##Usage
+    $ python demo.py  demo.py -u "user" -p "pw" -l "Seattle" -n Mewtwo
 
-## Feature Support
- * Python 2 and 3
- * Google/PTC auth
- * Address parsing for GPS coordinates
- * Allows chaining of RPC calls
- * Re-auth if ticket expired
- * Check for server side-throttling
- * Thread-safety
- * Advanced logging/debugging
- * Uses [POGOProtos](https://github.com/AeonLucid/POGOProtos)
- * Mostly all available RPC calls (see [API reference](https://github.com/tejado/pgoapi/wiki/api_functions) on the wiki)
+    [!] Your given location: Seattle, WA, USA
+    [!] lat/long/alt: 47.6062095 -122.3320708 0.0
+    [!] login for: testdemo123123
+    [+] Received API endpoint: https://pgorelease.nianticlabs.com/plfe/120/rpc
+    [+] Login successful
+    [+] Username: testdemo 
+    [+] You are playing Pokemon Go since: 2016-08-03 02:55:50
+    [+] POKECOIN: 0
+    [+] STARDUST: 0
+    No Mewtwo within 143m NW of you...
+    No Mewtwo within 594m NW of you...
+    No Mewtwo within 594m NW of you...
+    No Mewtwo within 842m NW of you...
+
+    (150) Mewtwo is visible at (47.6070213823, -122.338763651) for 780 seconds (1042m NW from you) 
 
 ## Documentation
 Documentation is available at the github [pgoapi wiki](https://github.com/tejado/pgoapi/wiki).
@@ -31,20 +32,5 @@ Documentation is available at the github [pgoapi wiki](https://github.com/tejado
  * geopy (only for pokecli demo)
  * s2sphere (only for pokecli demo)
 
-## Contribution
-Contributions are highly welcome. Please use github or [pgoapi.slack.com](https://pgoapi.slack.com) for it!  
-Join pgoapi.slack.com [here](https://pgoapislack.herokuapp.com/)!
-
-## Credits
-[Mila432](https://github.com/Mila432/Pokemon_Go_API) for the login secrets  
-[elliottcarlson](https://github.com/elliottcarlson) for the Google Auth PR  
-[AeonLucid](https://github.com/AeonLucid/POGOProtos) for improved protos  
-[AHAAAAAAA](https://github.com/AHAAAAAAA/PokemonGo-Map) for parts of the s2sphere stuff  
-[mikeres0](https://github.com/mikeres0) for the slack channel including auto signup  
-[DeirhX](https://github.com/DeirhX) for thread-safety
-
-## Ports
-[Node Port](https://github.com/Armax/Pokemon-GO-node-api) by Arm4x  
-[Node Port - pogobuf](https://github.com/cyraxx/pogobuf) by cyraxx 
-
-[![Analytics](https://ga-beacon.appspot.com/UA-1911411-4/pgoapi.git/README.md?pixel&useReferer)](https://github.com/igrigorik/ga-beacon)
+## Acknowledgements
+[Mila432](https://github.com/Mila432/Pokemon_Go_API), [AHAAAAAAA](https://github.com/AHAAAAAAA/PokemonGo-Map), [tejado](https://github.com/tejado/pgoapi)
